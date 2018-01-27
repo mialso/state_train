@@ -4,13 +4,9 @@ const {
     getPosition,
     updatePositionAction,
 } = require('./position.js');
+const State = require('./state.js');
 
-function State(id) {
-    return {
-        id,
-        version: 0,
-    };
-} 
+const initialState = new State(1);
 
 function update(state, change) {
     if (change) {
@@ -31,7 +27,7 @@ function print(state) {
 }
 
 // state reducer
-function reducer(state, action = {}) {
+function reducer(state = initialState, action = {}) {
     switch(action.type) {
         case updatePositionAction: {
             return update(state, setPosition(state.id, action.payload));
@@ -41,7 +37,6 @@ function reducer(state, action = {}) {
 }
 
 module.exports = {
-    State,
     reducer,
     print,
 };
