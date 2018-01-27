@@ -1,0 +1,11 @@
+{
+  "name": "state-games",
+  "version": "0.0.1",
+  "description": "play with state",
+  "main": "basic.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "mialso",
+  "license": "ISC"
+}
