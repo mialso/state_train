@@ -1,29 +1,3 @@
-/*
- * state change is a block
- */
-/*
-const change = state => (head = 0) => {
-    return state;
-}
-
-// block represents the change at a time
-const block = shape => data => {
-    return commit(data);
-}
-
-// get the array of changes and create result value for integer data
-const combineRule = changes => {
-    return changes.reduce((acc, val) => acc + val, 0);
-}
-
-const state = path => changes => {
-    return changes.map(commit(path)).filter(isTruthy);
-}
-
-const subscribe => handler => path => {
-}
-*/
-
 const pipe = (...fns) => x => fns.reduce((v, f) => f(v), x);
 
 const dispatch = subscriptions => change => {
